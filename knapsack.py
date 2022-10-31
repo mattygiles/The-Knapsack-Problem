@@ -29,7 +29,7 @@ def main():
     packed_weights = []
     total_weight = 0
 
-    # Since solver.BestSolutionContains(i) returns TRUE if the item x is included in the solution,
+    # Since solver.BestSolutionContains(i) returns TRUE if the item i is included in the solution,
     # packed_items is a list of the optimal packed items. Similarly, packed_weights are the weights of the packed items.
     for i in range(len(values)):
         if solver.BestSolutionContains(i):

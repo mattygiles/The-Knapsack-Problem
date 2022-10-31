@@ -7,8 +7,7 @@ from ortools.algorithms import pywrapknapsack_solver
 def main():
     # The following code declares the knapsack solver, a specialized solver for knapsack problems.
     solver = pywrapknapsack_solver.KnapsackSolver(
-        pywrapknapsack_solver.KnapsackSolver.
-        KNAPSACK_MULTIDIMENSION_BRANCH_AND_BOUND_SOLVER, 'KnapsackExample')
+        pywrapknapsack_solver.KnapsackSolver.KNAPSACK_MULTIDIMENSION_BRANCH_AND_BOUND_SOLVER, 'KnapsackExample')
 
     # The code below creates the data for the problem.
     # The data includes the following:
@@ -25,11 +24,11 @@ def main():
     # The program then gets the indices of the packed items in the solution as follows:
     solver.Init(values, weights, capacities)
     computed_value = solver.Solve()
-    
+
     packed_items = []
     packed_weights = []
     total_weight = 0
-    
+
     # Since solver.BestSolutionContains(i) returns TRUE if the item x is included in the solution,
     # packed_items is a list of the optimal packed items. Similarly, packed_weights are the weights of the packed items.
     for i in range(len(values)):
